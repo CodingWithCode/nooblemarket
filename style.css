@@ -1,0 +1,430 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+* {
+    font-family: sans-serif;
+}
+.background{
+    min-height: 100vh;
+    min-width: 100%;
+    background-image: linear-gradient(to bottom right, rgb(55, 0, 128), black);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 2% 6%;
+    z-index: 50;
+    width: 100%;
+    transition: 0.7s;
+}
+.logo-text{
+    color: white;
+    transition: 0.7s;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    transition: 0.7s;
+}
+.nav-links ul li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #7393B3;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 30px;
+}
+
+.about{
+    width: 100%;
+    min-height: 90vh;
+    background-image: linear-gradient(to bottom right, rgb(43, 0, 128), black);
+    text-align: center;
+}
+.shop-text{
+    font-size: 55px;
+    padding: auto;
+    padding-top: 20px;
+    color: white;
+}
+
+.shop-p{
+    color: white;
+    font-size: 25px;
+}
+
+.shop-cards{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.listing1{
+    width: 350px;
+    background-color: rgb(68, 0, 128);
+    border-color: rgb(26, 0, 128);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgb(89, 0, 255);
+    border-radius: 12.5px;
+    transition: 0.5s;
+}
+
+.listing1-image{
+    width: 250px;
+    height: 300px;
+}
+
+.listing1-title{
+    color: white;
+    padding: 10px;
+}
+
+.listing1-stock{
+    color: white;
+    padding-bottom: 10px;
+}
+button {
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 0 2.6rem;
+  }
+}
+
+.listing1:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(64, 0, 255, 0.631);
+}
+
+
+.projects{
+    width: 100%;
+    min-height: 80vh;
+    text-align: center;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('https://cdn.gameleap.com/images/articles/art_WzyVFhsk1k/feature/0.75x.webp');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.projects h1{
+    color: white;
+    font-size: 40px;
+}
+
+.projects p{
+    color: white;
+    font-size: 30px;
+    width: 750px;
+}
+
+.projects div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact{
+    width: 100%;
+    min-height: 50vh;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, rgb(45, 0, 128), black);
+}
+
+.contact h1{
+    font-size: 45px;
+    padding-top: 20px;
+    color: white;
+}
+
+.contact p{
+    font-size: 30px;
+    color: white;
+}
+
+.contact img{
+    width: 250px;
+}
+
+#loader{
+    background-image: url('loading.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 100;
+}
+
+.modal-container {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+    z-index: 100;
+    overflow: auto;
+}
+
+.modal-container.show {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.modal {
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	padding: 30px 50px;
+	text-align: center;
+	width: 600px;
+    height: 500px;
+    overflow: auto;
+}
+
+#close {
+    background-color: #47A386;
+	border: 0;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	color: #fff;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px 25px;
+}
+
+.m {
+    font-size: 75px;
+}
+
+#open {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(246, 247, 241);
+    /* (248, 249, 250); */
+    border: none !important;
+}
+
+.blog-page{
+    min-height: 100vh;
+    min-width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('background.gif');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.title-box{
+    text-align: center;
+    min-width: 100%;
+    min-height: 23vh;   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title-box h1{
+    padding-top: 2%;
+    color: white;
+    font-size: 50px;
+}
+
+.title-box p{
+    color: white;
+    font-size: 25px;
+}
+
+.hr-about{
+    margin: auto;
+    width: 100px;
+    border: 2px solid mistyrose;
+    border-radius: 10px;
+}
+
+.hr-projects{
+    margin: auto;
+    width: 100px;
+    border: 2px solid mistyrose;
+    border-radius: 10px;
+}
+
+.hr-blog{
+    margin: auto;
+    width: 100px;
+    border: 2px solid rgb(100, 149, 237);
+    border-radius: 10px;
+}
+
+.hr-contact{
+    margin: auto;
+    width: 100px;
+    border: 2px solid rgb(100, 149, 237);
+    border-radius: 10px;
+}
+
+ul li{
+    padding-bottom: 80px;
+}
+
+ul li h1{
+    color: white;
+    font-size: 45px;
+}
+
+ul li p{
+    color: white;
+    font-size: 25px;
+}
+
+.narutowebimg{
+    width: 100%; 
+    max-width: 650px; 
+    height: auto;
+}
+
+@media screen and (max-width: 1055px) {
+    .shop-cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px
+    }
+
+    .project-cards-row1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px
+    }
+}
+#open-nav {
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+#close-nav {
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+@media(max-width: 619px) {
+    #open-nav {
+        display: block;
+        cursor: pointer;
+    }
+
+    #close-nav {
+
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+
+    .nav-links{
+        position: absolute;
+        background: rgb(21, 16, 28);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 10000;
+        transition: 1s;
+    }
+
+    .nav-links ul{
+        padding: 30px;
+    }
+
+    .listing1{
+        text-align: center;
+    }
+}
