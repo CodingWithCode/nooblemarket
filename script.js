@@ -2,7 +2,7 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.querySelector(".navbar").style.backgroundColor = "rgb(43, 0, 128)";
+        document.querySelector(".navbar").style.backgroundColor = "#028A0F";
         document.querySelector(".logo-text").style.color = "white";
         if (window.innerWidth >630) {
             document.querySelector(".nav-element1").style.color = "white";
