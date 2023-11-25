@@ -139,6 +139,12 @@ nav {
     padding-bottom: 20px
 }
 
+.note{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
 button {
   background-image: linear-gradient(to bottom right, rgb(4, 109, 20),rgb(15, 128, 15));
   border-radius: 8px;
